@@ -1,11 +1,11 @@
 import React, {useEffect} from 'react'
 import { useDispatch, useSelector } from "react-redux";
 import {dataAction} from '../Redux/Actions/dataAction';
+
 function Data() {
     const data = useSelector((state) => state.data);
     const dispatch = useDispatch();
 
-    console.log(data);
     useEffect(() => {
         dispatch(dataAction.getData());
     }, []);
@@ -25,5 +25,4 @@ function Data() {
         </div>
     )
 }
-
 export default Data

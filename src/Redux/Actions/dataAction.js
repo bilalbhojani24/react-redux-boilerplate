@@ -2,9 +2,7 @@ import axios from 'axios';
 export const dataAction = {
     getData,
 };
-
 function getData() {
-
     return dispatch => {
 
         dispatch(request());
@@ -20,8 +18,8 @@ function getData() {
             dispatch(failure(error));
         });
     };
-
     function request() { return { type: 'REQUEST_DATA' }}
     function success(data) { return { type: 'RECEIVE_DATA', payload : data }}
     function failure(error) { return { type: 'ERROR_DATA', error }}
 }
+

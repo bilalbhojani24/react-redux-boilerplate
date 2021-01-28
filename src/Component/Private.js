@@ -1,19 +1,15 @@
-import React from 'react'
-import { useDispatch, useSelector } from "react-redux";
-import {testAction} from '../Redux/Actions/testActions';
+import React, {useState} from 'react'
 
 function Private() {
-    const counter = useSelector((state) => state.counter); 
-    const dispatch = useDispatch();
-    
+    const [count, setCount] = useState(0)
     const functionCount = () => {
-        dispatch(testAction.counter(counter.count))
+        setCount(count + 1);
     }
     return (
         <div>
             <h1>Welcome to private page.</h1>
             <button onClick={() => {functionCount()}}>Counter</button>
-            <h1>{counter.count}</h1>
+            <h1>{count}</h1>
         </div>
     )
 }

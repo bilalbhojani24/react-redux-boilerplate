@@ -27,6 +27,5 @@ const initialState = {
             return state;
     }
 }
-
 export default getUserReducer;
 
